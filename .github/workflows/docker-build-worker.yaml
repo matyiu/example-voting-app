@@ -25,6 +25,6 @@ jobs:
       - name: Docker build
         uses: docker/build-push-action@v3
         with:
-          context: worker
+          context: "{{defaultContext}}:worker"
           push: ${{ github.event_name != 'pull_request' }}
           tags: rjeffvalle/voting-app-worker:latest
