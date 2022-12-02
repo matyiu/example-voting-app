@@ -28,3 +28,5 @@ jobs:
           context: "{{defaultContext}}:vote"
           push: ${{ github.event_name != 'pull_request' }}
           tags: rjeffvalle/voting-app-vote:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
