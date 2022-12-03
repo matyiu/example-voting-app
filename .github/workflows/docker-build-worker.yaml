@@ -52,7 +52,7 @@ jobs:
         with:
           image-ref: ${{ github.run_id }}
           exit-code: 0
-          format: table
+          format: 'sarif'
           output: 'trivy-results.sarif'
 
 #      - name: Run Trivy for HIGH,CRITICAL CVEs and report (blocking)
